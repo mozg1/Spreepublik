@@ -1,0 +1,14 @@
+Logo und Content nicht schieben, sondern nur runtescrollen und die Punkte runterschieben. Dadurch kein Whitespace, dafür dynamische Bedienung. Den Content dann Scroll-entsprechend dynamisch reinladen und nicht dauerhaft da haben
+
+
+Bei rechter Navleiste, das Logo beim Scrollen rechts runterdrücken und vertikal mittig positionieren, ansonsten links
+
+Geile Fonts aussuchen, Navigationspfeile, mehr dynamische Einschiebungen/Einblendungen, Farben/Hintergrundfarben ausprobieren, Trennlinien, Footer-Positionierung
+
+CMS, Gallerie
+
+Hintergrundbilder, Nav-Elemente, Autogallerie
+
+Die Bewegungen/Interaktionen/Farben/Positionen der Website logisch der Wirkung des Inhalts anpassen.
+
+Footer beim wechseln der Seiten bitte irgendwie verdecken

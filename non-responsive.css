@@ -1,0 +1,414 @@
+html,body {
+    width:100%;
+    height:100%;
+}
+
+#main {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+    z-index:0;
+}
+
+
+#spreelogo {
+    margin: 0 auto;
+    overflow:visible;
+    width: 100%;
+    /*
+        top: 50%; left: 50%;
+
+        transform: translate(-50%, 10%);
+        -webkit-transform: translate(-50%, 10%);
+        -ms-transform: translate(-50%, 10%);
+        -moz-transform: translate(-50%, 10%);
+    */
+}
+
+.navwrapper {
+    margin:5% auto 0;
+
+    width: 40%;
+/*
+    height: 731px;
+*/
+    display: block;
+    z-index: 10;
+
+
+/*
+    background-image: url("../img/Spreepublik_logo_biggest.gif");
+    background-size:100% 100%;
+    background-position: 50% 50%;
+  */
+}
+
+#content {
+    font-size:1em;
+    width: 100%;
+    display:none;
+    z-index: 10;
+}
+
+#main, .navwrapper, .navelement, .navpoint, .shortinfo {
+    transition: all .5s;
+}
+
+#navlist {
+    width:100%;
+    height:100%;
+}
+
+#testwrap {
+    position:relative;
+    top:68px;
+    left:47px;
+}
+
+.navelement {
+    z-index: 10;
+    font-size: 1.18em;
+
+    position: absolute;
+  /*
+    top: 50%;
+    left: 50%;
+    text-align: center;
+*/
+    -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+    -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
+    -moz-transform: skew(-50deg) rotate(-70deg) scale(1);
+    transform: skew(-50deg) rotate(-70deg) scale(1);
+
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: opacity 0.3s, color 0.3s;
+    -moz-transition: opacity 0.3s, color 0.3s;
+    transition: opacity 0.3s, color 0.3s;
+
+    background-color:rgba(255,255,255,0);
+
+    opacity:1.0;
+
+    min-width:5em;
+    min-height:5em;
+
+    max-width: 15em;
+    max-height:15em;
+
+
+
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+
+    list-style: none;
+}
+
+.navwrapper li:first-child {
+    -webkit-transform: rotate(-10deg) skew(50deg);
+    -ms-transform: rotate(-10deg) skew(50deg);
+    -moz-transform: rotate(-10deg) skew(50deg);
+    transform: rotate(-10deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(2) {
+    -webkit-transform: rotate(30deg) skew(50deg);
+    -ms-transform: rotate(30deg) skew(50deg);
+    -moz-transform: rotate(30deg) skew(50deg);
+    transform: rotate(30deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(3) {
+    display: none;
+    -webkit-transform: rotate(70deg) skew(50deg);
+    -ms-transform: rotate(70deg) skew(50deg);
+    -moz-transform: rotate(70deg) skew(50deg);
+    transform: rotate(70deg) skew(50deg)
+}
+
+.navwrapper li:nth-child(4) {
+    -webkit-transform: rotate(110deg) skew(50deg);
+    -ms-transform: rotate(110deg) skew(50deg);
+    -moz-transform: rotate(110deg) skew(50deg);
+    transform: rotate(110deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(4) {
+    -webkit-transform: rotate(110deg) skew(50deg);
+    -ms-transform: rotate(110deg) skew(50deg);
+    -moz-transform: rotate(110deg) skew(50deg);
+    transform: rotate(110deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(5) {
+    -webkit-transform: rotate(150deg) skew(50deg);
+    -ms-transform: rotate(150deg) skew(50deg);
+    -moz-transform: rotate(150deg) skew(50deg);
+    transform: rotate(150deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(6) {
+    -webkit-transform: rotate(190deg) skew(50deg);
+    -ms-transform: rotate(190deg) skew(50deg);
+    -moz-transform: rotate(190deg) skew(50deg);
+    transform: rotate(190deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(7) {
+    -webkit-transform: rotate(230deg) skew(50deg);
+    -ms-transform: rotate(230deg) skew(50deg);
+    -moz-transform: rotate(230deg) skew(50deg);
+    transform: rotate(230deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(8) {
+    -webkit-transform: rotate(270deg) skew(50deg);
+    -ms-transform: rotate(270deg) skew(50deg);
+    -moz-transform: rotate(270deg) skew(50deg);
+    transform: rotate(270deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(9) {
+    -webkit-transform: rotate(310deg) skew(50deg);
+    -ms-transform: rotate(310deg) skew(50deg);
+    -moz-transform: rotate(310deg) skew(50deg);
+    transform: rotate(310deg) skew(50deg);
+}
+
+.navpoint {
+    width:11%;
+    height:11%;
+    background-color:steelblue;
+    border-radius:50%;
+    border-bottom: 10px;
+
+    margin: 10px;
+    z-index:0;
+    opacity:1.0;
+
+    -webkit-transform: skew(-50deg);
+    -ms-transform: skew(-50deg);
+    -moz-transform: skew(-50deg);
+    transform: skew(-50deg);
+}
+
+.shortinfo {
+    display:block;
+    font-family: sans-serif;
+    font-size: 30px;
+
+    color:black;
+
+    opacity:0.3;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    margin:30px;
+
+}
+
+.navpoint:hover {
+    background-color: purple;
+    transition: all .3s;
+}
+
+.navpoint:hover .shortinfo {
+    opacity: 1.0;
+    transition: all .3s;
+
+}
+
+.navpoint > a {
+    position:absolute;
+    right:1px;
+}
+
+#aboutNav {
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+
+    margin-left: -150px;
+}
+
+#aboutPoint {
+    top: 32%;
+    left: 55%;
+    position:relative;
+}
+
+#neuesNav {
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+
+    margin-left: -120px;
+}
+
+#neuesPoint {
+    top: 18%;
+    left:78%;
+    position:relative;
+}
+
+
+#projekteNav {
+    -webkit-transform: rotate(-110deg);
+    -ms-transform: rotate(-110deg);
+    -moz-transform: rotate(-110deg);
+    transform: rotate(-110deg);
+
+    margin-left: -70px;
+}
+
+#projektePoint {
+    top: 48%;
+    position:relative;
+}
+
+#gallerieNav {
+    -webkit-transform: rotate(-190deg);
+    -ms-transform: rotate(-190deg);
+    -moz-transform: rotate(-190deg);
+    transform: rotate(-190deg);
+
+    margin-left: -150px;
+}
+
+#galleriePoint {
+    top: 32%;
+    left:77%;
+    position:relative;
+}
+
+#kontaktNav {
+    -webkit-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    transform: rotate(-70deg);
+
+    margin-left: 100px;
+}
+
+#kontaktPoint {
+    top: 80%;
+    position:relative;
+}
+
+
+#flotteNav {
+    -webkit-transform: rotate(-150deg);
+    -ms-transform: rotate(-150deg);
+    -moz-transform: rotate(-150deg);
+    transform: rotate(-150deg);
+
+    margin-left: 70px;
+}
+
+#flottePoint {
+    top: 48%;
+    left: 42%;
+    position:relative;
+}
+
+#blogNav {
+    -webkit-transform: rotate(-230deg);
+    -ms-transform: rotate(-230deg);
+    -moz-transform: rotate(-230deg);
+    transform: rotate(-230deg);
+
+    margin-left:-100px;
+}
+
+#blogPoint {
+    top: 17%;
+    left:84%;
+    position:relative;
+}
+
+#impressumNav {
+
+    -webkit-transform: rotate(-310deg));
+    -ms-transform: rotate(-310deg);
+    -moz-transform: rotate(-310deg);
+    transform: rotate(-310deg);
+
+    margin-left:-100px;
+}
+
+#impressumPoint {
+    top: 35%;
+    left:53%;
+    position:relative;
+}
+
+#spendenNav {
+    -webkit-transform: rotate(-270deg);
+    -ms-transform: rotate(-270deg);
+    -moz-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+
+    margin-left:-100px;
+}
+
+#spendenPoint {
+    top: 20%;
+    left:77%;
+    position:relative;
+}
+
+#backArrow {
+    width:200px;
+    height:100px;
+
+    display: none;
+    position: fixed;
+    float:right;
+    top: 10px;
+    right:30px;
+    z-index: 20;
+    opacity:0.8;
+    margin:0;
+    border:0;
+}
+
+.actualcontent {
+    margin: 0 auto;
+    width: 60%;
+    background-color: rgba(233,233,233,0.9);
+    border-style:solid;
+    border-width:50px;
+    border-color:rgba(233,233,233,0.9);
+    border-radius: 0.5%;
+    box-shadow: 0 0 3px 3px gray;
+
+}
+
+
+#gallerie > img {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    overflow:visible;
+    vertical-align:middle;
+}
+
+footer {
+    text-align:center;
+    margin-top:15em;
+    position:relative;
+    display:block;
+
+}
