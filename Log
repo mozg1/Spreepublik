@@ -1,0 +1,115 @@
+Log 17.02 by A.Z.
+
+13:27   Ich probiere mal die ganze Wrapper-Struktur auf Transitions zu checken und gucken ob das Wiggeln davon kommt,
+        dass bestimmte DIV's sich asynchron bewegen
+
+13:44   Kein Erfolg
+        Ausprobieren, ob der Pfeil schuld ist
+
+13:45   Pfeil IST schuld
+        Suchen nach Lösungsansätzen - es muss eine Art Overlay DIV sein, welches sich mit nichts in der Seitenstruktur
+        beißen kann
+        Ideen - fixed position, z-index, dynamic float, scalable  background-image
+
+15:00   Erstmal kein Erfolg mit CSS-Positionierung
+        Versuchen erstmal Foundation einzubinden
+
+15:11   Foundation hat das Problem des Verschiebens sofort gelöst
+        Neues Problem - Navigationspunkte wurden um ca 50px nach links verschoben, Rekalibrierung notwendig
+        Navlist müsste zurechtgerückt werden
+
+15:25   Navlist zureechtgerückt und mit %-Positionierung versehen
+        Hoffen, dass die vielen PX-Größen/Border/Margin/etc. Angaben sich mit der Responsivität irgendwie vertragen
+
+15:34   Weil gerade unklar ist, inwiefern sich das Grid-System mit unserem Wrapper verträgt, versuchen wir erstmal, analog zum
+        Content-Container, der ja bereits mit Vanilla-CSS responsiv ist, dasselbe auf den Wrapper zu übertragen, mit %-Angaben
+
+15:39   Klappt schonmal bei Setzen von % Angaben auf den Navwrapper - das Bild wird responsiv und behält die Position
+        Animation klappt auch nachwievor einwandfrei. Jetzt die Kreisnavigation!
+
+15:44   Problem mit der Kreisnavigation - Absolute Positionierung. Lösung suchen
+
+16:04   Die Parallelogramme lassen sich eigentlich perfekt in das Zentrum des Logos positionieren und verschieben sich auch nicht
+        bei Veränderung der Größe - die Punkte und die Labels dagegen drehen sich im Kreis... wtf
+        Einziges Problem sind die Transformationen und fixen px-Positionierungen der Punkte, die sich entsprechend falsch verschieben
+
+16:42   Weiteres Problem ist außerdem, dass beim Verändern der Bildschirmgröße im onTop-Zustand, der gesamte navWrapper
+        nach oben rausgeschoben wird
+
+16:50   Die Punkte waren an sich schon viel zu unproportional. Sieht jetzt so aus, als müsst es ersma nur neu positioniert werden
+        Die Scheiße dreht sich leider immer noch im Kreis. Absolute Positionierung der Punkte in den Parallelogrammen notwendig
+        Immerhin stört die Änderung der Parallelogramme auf relative nicht die Formgestaltung der Punkte mit wenn auch
+        fragwürdigen %-Angaben
+
+17:00   Läuft - Repositionierung erforderlich. Erstmal aber probieren die Parallelogramme kleiner zu machen
+
+17:23   Maan dauert das ewig die Kackpunkte zu positionieren. Na wenigstens läuft Squarepusher
+
+17:45   Ok, das wär getan - Neues Problem - verändert man die Bildschirmgröße während des ausgeklappten Zustands -
+        und klappt man dann wieder ein, können sich die Punkte nicht mehr richtig positionieren, was nicht gerade zur User
+        Experience beiträgt. Nochmal den Verschiebungsmechanismus durchgehen und gucken ob sich das lösen lässt, z.b.
+        durch Bildschirmgrößen-änderungs-abfragen, mit vorher gespeicherten Werten etc.
+        Wenn alles reißt, machen wir wie vorher schon geplant 3 fixe Bildschirmgrößen.
+
+17:49   Und dann ist da nachwievor das Problem mit dem Rausschieben des Containers bei Verkleinerung - was bei nicht
+        ausgeklapptem Content keine Probleme bereitet.
+        Wenn die beiden Sachen erstmal gelöst sind, dann nur noch die Labels responsiv anpassen und gut is
+
+18:18   Ende der Fresspause
+
+18:33   Vielleicht haben wir Glück und müssen, nur die %-Angaben der MoveDown-Methode anpassen
+
+18:47   Wie angenommen - nur die % Zahlen auf vorgegbenen Ursprung setzen. Alles klappt bis auf Flotte und Spende
+
+18:58   Was daran lag, dass bei MoveUp für alle .navpoints ein top/left Offset gesetzt wird, der bei Flotte und
+        Spende nicht überschriben wird, weil sie nicht mit top/left arbeiten. Der Scheiß schon wieder
+
+19:07   Sieht so aus als müssten wir versuchen wieder alles mit Top/Left zu lösen
+
+19:14   Läuft der Mist. Jetzt die Labels.
+
+19:26   Mist. Mit margins ist das ne schlechte Lösung. Probieren's wieder mit Top-Left Gedöns. Keine Garantie
+        bei umgekehrter Nav-Animation
+
+19:32   Groß. Top und Left Angaben verändern überhaupt nichts. Darüber hinaus werden die Labels noch nicht skaliert
+
+19:35   Es ist schon ein Rätsel - bei absoluter Positionierung wandern sie im Kreis, bei relativer bleiben sie
+        relativ konstant
+
+20:02   Problem - die Labels befinden sich innerhalb des Point-DIVs, welches absolut ist, weswegen die
+        Größenangaben der Child-DIVs nicht mehr responsiv sind
+
+20:18   Mal die Labels in <p> Elemente packen und gucken ob sich was ändert
+
+20:40   Nö
+
+20:51   Aha. Navpoints können also auch relative sein. Na gut zu wissen...
+
+21:21   Hilft alles nüscht, wir probieren's mit media-queries
+
+21:22   Genug für heute, wir haben noch 3 Tage Zeit. Morgen dann Responsivität komplett fertig, inklusive Bremse
+        Danach Formattierung, Scroll-Design, individuelle Animationen und sonstiger Schnickschnack
+
+Log 18.02 - Gude
+
+09:33   Media Queries go! Das mit font-size vom Body oder Parent aus klappt natürlich nich
+
+10:44   So, erstmal genug Solstafir gehört
+
+11:16   Interessant, dass auf vertikale Skalierung keinerlei Wert gelegt wird
+
+11:27   Na wer hätte gedacht, dass Media Queries so einfach sind!
+
+11:41   So, vier Bildschirmgrößen eingestellt. Jetzt erstmal positionieren. Wäre noch schön, wenn man was
+        an der Responsivität des Contents machen könnte. Schön, dass der Footer schon mal Größenbegrenzt
+
+        TODO für heute:
+        Logo + Content responsiv und sinnvoll, unnötige Scrollbalken weg,
+        alles perfekt positioniren z.b. auch Titel, Pfeil responsiv.
+        Kein nach oben wegrutschen der Website. Warum ist der Body auch so ewig lang?
+        Achja und unser Content lädt nicht mehr. Wtf??? Zumindest der #about-Tag, flotte und Spende
+
+13:20   So, genug Zeit totgeschlagen
+
+13:31   Spenden-Label ist das einzige, was seinen Ort nicht verändert - es hat %-Angaben und nur 1 Margin
+        Probieren, ob's für die anderen analog klappt!

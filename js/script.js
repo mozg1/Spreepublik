@@ -14,6 +14,11 @@ window.onload = function() {
      console.log("height: " + height + " width: " + width + " top: " + globTop + " left: " + globLeft);
 
  */
+
+    /**
+     * check-variables for Header-Position-Status
+     * @type {boolean}
+     */
     var onTop = false;
     var stay = false;
 
@@ -25,6 +30,11 @@ window.onload = function() {
             top: $("#main").height() / 2 - 260
         });
     */
+
+    /**
+     * Scrolling-event handlers
+     */
+
     $("#backArrow").bind("click", hideContent);
 
     $(".navpoint").click(function(event) {
@@ -46,6 +56,9 @@ window.onload = function() {
 
     });
 
+    /**
+     * Scrolling-fuctionality
+     */
 
     function hideContent() {
         stay = false;
@@ -66,12 +79,22 @@ window.onload = function() {
         return r;
     };
 
+    /**
+     * Function for loading external html content
+     * @param id - div id-marker of content to be displayed
+     */
+
     function reloadContent(id) {
         console.log(Date.now());
         $(".actualcontent").remove();
         $("#content").load("../html/content.html #"+id[0]).fadeIn("slow");
 
     }
+
+    /**
+     * FORTH
+     * Function for moving up the page and animating navigation-points, to display content
+     */
 
     function moveUp() {
         if(!onTop) {
@@ -96,6 +119,7 @@ window.onload = function() {
             $("footer").css({
                 "margin-top" :0
             });
+
 
             $("#aboutEl").css({
                 "-webkit-transform" : "rotate("+310+"deg)" + "skew("+50+"deg)",
@@ -198,8 +222,8 @@ window.onload = function() {
             });
 
             $(".navpoint").css({
-                "top": 25+"%",
-                "left": 35+"%"
+                "top": 30+"%",
+                "left": 50+"%"
             });
 
             onTop = true;
@@ -208,12 +232,18 @@ window.onload = function() {
         }
     }
 
-
+    /**
+     * BACK
+     * Function for moving down the page and animating navigation-points, to display content
+     */
 
     function moveDown() {
         console.log(Date.now());
 
         $(".actualcontent").remove();
+
+        // arrow is being moved in hideContent-method above
+        // $("#backArrow").css({ disply:"none" });
 
         if(onTop) {
 
@@ -248,9 +278,10 @@ window.onload = function() {
             });
 
 
+
             $("#blogPoint").css({
-                "top": 18+"%",
-                "left":85+"%"
+                "top": -1+"%",
+                "left":91+"%"
             });
 
             $("#blogNav").css({
@@ -262,8 +293,8 @@ window.onload = function() {
 
 
             $("#spendenPoint").css({
-                "top": 20+"%",
-                "left": 80+"%"
+                "top": -5+"%",
+                "left": 93+"%"
             });
 
             $("#spendenNav").css({
@@ -275,8 +306,8 @@ window.onload = function() {
 
 
             $("#projektePoint").css({
-                "top" : 48+"%",
-                "left": 1+"%"
+                "top" : 39+"%",
+                "left": 35+"%"
             });
 
 
@@ -296,8 +327,8 @@ window.onload = function() {
 
 
             $("#neuesPoint").css({
-                "top": 18+"%",
-                "left": 78+"%"
+                "top": -21+"%",
+                "left": 94+"%"
             });
 
 
@@ -318,11 +349,9 @@ window.onload = function() {
 
 
 
-
-
             $("#galleriePoint").css({
-                "top": 32+"%",
-                "left":77+"%"
+                "top": 22+"%",
+                "left":83+"%"
             });
 
             $("#gallerieNav").css({
@@ -342,8 +371,8 @@ window.onload = function() {
 
 
             $("#flottePoint").css({
-                "top": 48+"%",
-                "left": 42+"%"
+                "top": 44+"%",
+                "left": 61+"%"
             });
 
 
@@ -364,8 +393,8 @@ window.onload = function() {
 
 
             $("#impressumPoint").css({
-                "top": 35+"%",
-                "left": 56+"%"
+                "top": 13+"%",
+                "left": 81+"%"
             });
 
 
@@ -386,8 +415,8 @@ window.onload = function() {
 
 
             $("#aboutPoint").css({
-                "top": 32+"%",
-                "left": 55+"%"
+                "top": 7+"%",
+                "left": 79+"%"
             });
 
             $("#aboutNav").css({
@@ -409,7 +438,9 @@ window.onload = function() {
         }
     }
 
-
+    /**
+     * test-function for the offset coordinates of LOGO and CONTENT
+     */
 
     $("#offset").bind("click",getOffset);
 

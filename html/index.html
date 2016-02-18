@@ -5,8 +5,36 @@
     <link rel="stylesheet" href="../css/generalstyle.css"/>
     <script type="text/javascript" src="../js/script.js"></script>
     <script type="text/javascript" src="../js/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="../css/foundation-6/css/foundation.css">
+    <script type="text/javascript" src="../css/foundation-6/js/foundation.min.js"></script>
+
+
+
     <title></title>
 </head>
+
+<!--
+Genereller Container-Aufbau lautet:
+            body
+                img-backArrow
+
+                #main
+                    navlogo-navwrapper
+
+                        #testwrap
+
+                            #navlist
+                                .navelement
+                                    .navpoint
+                                        .shortinfo
+                                        a href
+                        img-logo
+
+                content-contentcontainer
+
+                footer
+-->
+
 <body>
 
 <div id="backArrow">
@@ -19,19 +47,26 @@
         <div id="navlogo" class="navwrapper">
 
             <div id="testwrap">
-            <!-- navpoints from 9 to 20 clockwise -->
+
+            <!-- navpoints from 9 to 20 clockwise
+                ..El for parallelogram
+                ..Nav for text-label
+                ..Point for color-Dot
+            -->
+
             <ul id="navlist">
                 <li  class="navelement" id="aboutEl">
                     <div  class="navpoint" id="aboutPoint"> <!-- 1 -->
-                        <div id="aboutNav" class="shortinfo">Über uns</div>
+                        <div  class="shortinfo" id="aboutNav">Über uns</div>
                         <a href="#">
                         </a>
                     </div>
+
                 </li>
 
                 <li  class="navelement" id="neuEl">
                     <div class="navpoint" id="neuesPoint"> <!-- 2 -->
-                        <div id="neuesNav" class="shortinfo">Neues</div>
+                        <div  class="shortinfo" id="neuesNav">Neues</div>
                         <a href="#">
                         </a>
                     </div>
@@ -39,7 +74,7 @@
 
                 <li  class="navelement">
                     <div class="navpoint" id="kontaktPoint"> <!-- 3 -->
-                        <div id="kontaktNav" class="shortinfo"></div>
+                        <div  class="shortinfo" id="kontaktNav"></div>
                         <a href="#">
                         </a>
                     </div>
@@ -47,7 +82,7 @@
 
                 <li  class="navelement" id="proEl">
                     <div class="navpoint" id="projektePoint"> <!-- 4 -->
-                        <div id="projekteNav" class="shortinfo">Projekte</div>
+                        <div class="shortinfo" id="projekteNav">Projekte</div>
                         <a href="#">
                         </a>
                     </div>
@@ -57,7 +92,7 @@
 
                 <li  class="navelement" id="flotEl">
                     <div class="navpoint" id="flottePoint"> <!-- 5 -->
-                        <div id="flotteNav" class="shortinfo">Flotte</div>
+                        <div  class="shortinfo" id="flotteNav"><p>Flotte</div>
 
                         <a href="#">
                         </a>
@@ -67,25 +102,24 @@
 
                 <li  class="navelement" id="galEl">
                     <div class="navpoint" id="galleriePoint"> <!-- 6 -->
-                        <div id="gallerieNav" class="shortinfo">Gallerie</div>
+                        <div  class="shortinfo" id="gallerieNav">Gallerie</div>
                         <a href="#">
                         </a>
                     </div>
                 </li>
 
-                <li  class="navelement">
+                <li  class="navelement" id="blogEl">
                     <div  class="navpoint" id="blogPoint"> <!-- 7 -->
-                        <div id="blogNav" class="shortinfo">Blog</div>
+                        <div  class="shortinfo" id="blogNav">Blog</div>
 
                         <a href="#">
                         </a>
                     </div>
                 </li>
 
-                <li  class="navelement">
+                <li  class="navelement" id="spendEl">
                     <div class="navpoint" id="spendenPoint"> <!-- 8 -->
-                        <div id="spendenNav" class="shortinfo">Spende</div>
-
+                        <div class="shortinfo" id="spendenNav">Spende</div>
                         <a href="#">
                         </a>
                     </div>
@@ -94,7 +128,7 @@
 
                 <li  class="navelement" id="imprEl">
                     <div class="navpoint" id="impressumPoint"> <!-- 9 -->
-                        <div id="impressumNav" class="shortinfo">Impressum</div>
+                        <div class="shortinfo" id="impressumNav">Impressum</div>
 
                         <a href="#">
                         </a>

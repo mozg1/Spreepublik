@@ -1,14 +1,42 @@
-Logo und Content nicht schieben, sondern nur runtescrollen und die Punkte runterschieben. Dadurch kein Whitespace, dafür dynamische Bedienung. Den Content dann Scroll-entsprechend dynamisch reinladen und nicht dauerhaft da haben
+- Logo und Content nicht schieben, sondern nur runtescrollen und die Punkte runterschieben. Dadurch kein Whitespace, dafür dynamische Bedienung. Den Content dann Scroll-entsprechend dynamisch reinladen und nicht dauerhaft da haben
 
 
-Bei rechter Navleiste, das Logo beim Scrollen rechts runterdrücken und vertikal mittig positionieren, ansonsten links
+- Bei rechter Navleiste, das Logo beim Scrollen rechts runterdrücken und vertikal mittig positionieren, ansonsten links
 
-Geile Fonts aussuchen, Navigationspfeile, mehr dynamische Einschiebungen/Einblendungen, Farben/Hintergrundfarben ausprobieren, Trennlinien, Footer-Positionierung
+- Geile Fonts aussuchen, Navigationspfeile, mehr dynamische Einschiebungen/Einblendungen, Farben/Hintergrundfarben ausprobieren, Trennlinien, Footer-Positionierung
 
-CMS, Gallerie
+- CMS(Valle), Gallerie
 
-Hintergrundbilder, Nav-Elemente, Autogallerie
+- Hintergrundbilder, Nav-Elemente, Autogallerie, Newsfeed
 
-Die Bewegungen/Interaktionen/Farben/Positionen der Website logisch der Wirkung des Inhalts anpassen.
+- Die Bewegungen/Interaktionen/Farben/Positionen der Website logisch der Wirkung des Inhalts anpassen.
 
-Footer beim wechseln der Seiten bitte irgendwie verdecken
+- Footer beim wechseln der Seiten bitte irgendwie verdecken
+
+
+
+TODO:
+
+1. Foundation einbinden
+2. Responsive Design von Logo + Navigationspunkte + Navschriften + Titel
+3. DIV Sprünge ausmerzen
+4. Scrolle bis unter das Logo, ordne die Punkte in einer Linie an, Fade dann den Content in den fixen Bildschirmcontainer ein, ohne weiter nach unten zu scrollen.
+
+Schriften:
+	Titel
+	Links
+	Schriftarten
+	Generelle Formatierung
+	
+Farben:
+	Konturlinien
+	Schatten
+	Hintergründe
+	3D-Übergänge
+
+Formgebung, (Rein)Lade-animationen roter Faden beim Scrollen
+
+Individuelle Design/Animations/Farbkonzepte für unterschiedliche Punkte
+
+
+.clip-path
