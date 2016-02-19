@@ -113,3 +113,82 @@ Log 18.02 - Gude
 
 13:31   Spenden-Label ist das einzige, was seinen Ort nicht verändert - es hat %-Angaben und nur 1 Margin
         Probieren, ob's für die anderen analog klappt!
+
+14:25   Positionierung dauert ewig. Nervig ist auch das Fehlen einer Responsive-Bremse.
+        Nach Möglichkeit nur einen margin verwenden, weil's konsistenter aussieht. Und Bremse einbauen
+
+14:55   Geilon. Leider geht bei der Animation bissl was kaputt- vor allem bei der kleinsten Bildschirmgröße
+        Müssenwa fixen. Mach mal bitte den Kacktitel mittig, ich kanns nich mehr sehen
+
+15:01   War ja bloß n unnötiger Margin. Danke Foundation
+
+15:04   So, jetzt ist ne Feinausrichtung einzelner Labels bei der Animation nötig. Mit 3 Sonderfällen
+        für kleine Screens. Erstmal aber gucken wir wie wir ne Bremse einbauen können, inklusive Rausschiebe-
+        Problematik beheben
+
+15:26   Sieht langsam echt gut aus. Es könnte sich jedoch anbannen, dass wir die Schiebedinger doch auf Scroll-
+        Animationen abändern müssen, weil es gerade keinen offensichtlichen Weg gibt das Rausschieben zu
+        unterbinden
+
+15:43   TODO: Cooler Einfall von Bän - den Point+Label leuchten lassen, der gerade angezeigt wird
+
+15:44   Wir satteln um auf Scroll-animation. Fängt zumindest schonmal die sowieso vorgegebene Logik an
+
+16:26   der Anfang mit den Scroll-Ebenen ist gemacht.
+
+16:39   Soweit so gut - jetzt wollen wir aber erstmal aufräumen - nochmal alles perfekt positionieren für alle
+        Fälle, Titel responsiv machen, Pfeil responsiv machen, das Content-Problem beheben
+        Dann erstmal Mate-Pause und mit den ganzen Scroll-Einblend-Sachen weiterschauen
+
+16:54   Sonderfälle - bei gewöhnlicher Auflösung: About, Gallerie, Neues
+                    - bei geringster Auflösung: About, Spende, Neues
+        probieren wa ersma durch width-if-Abfrage
+
+17:23   Soso, collapsing margin also
+
+17:33   Man is das n Krampf mit den margins. Aber dank Top funktionierts jetzt - weiter gehts!
+
+17:51   Spenden-Label hovert nicht. Bitte lösen!
+
+18:17   Die Validität der Parallelogramme bleibt vorerst erhalten!
+        Statt bei der Animation margins zu setzen, sollte man translate lieber in Betracht ziehen
+
+18:23   Machen dann später translate - Scheiß Fleißarbeit. Jetzt erstmal Pfeil und Content-check
+
+19:10   Alle nur weil Flotte-Label in nem <p> Element war. Oh man. Augen Auf nächstes mal!
+        Validität der Margin-Setzung im ursprl CSS muss geprüft werden, im Vergleich zu translates in Bezug auf px-Angaben!
+
+19:15   Mal versuchen ne Vektorgrafik reinzuladen zwecks Bilderaustausch
+        Rest für heute:
+        TODO: nichts klickar/kopierbar machen
+        TODO: Bilder im Content ebenfalls skalierbar
+        TODO: Positionierung + das was Bän sagt
+
+        Freitag/Samstag:
+        TODO: Content: Gallerie, Flotte, Blog, Neues, Projekte - nich OnePage, sondern mit Menü, aber AJAX
+        TODO: Mobile Testing, Browser-Kompatibilität
+
+        ab Sonntag:
+        TODO: Formattierung von Hintergrundfarbe und Rahmen, sowie evtl. Hintergrundbilder
+        TODO: bei kurzen Punkten wie Konakt oder Spende - andere Logo-Animation(z.B. verkleinern)
+        TODO: Text-Fade-In, scroll-Level 2
+        TODO: CSS im Logo/Navigation zwecks Animations-Gimmicks und Einblendungen
+
+23:38   Sieht zwar nich PERFEKT responsiv aus und die Drehanimation is wiggly,
+        aber erfüllt auf jeden Fall seinen Zweck.
+        Warum sind Bilder von der Gallerie skalierbar, die anderen aber nicht?
+        Weil da die width Hard-gecodet war
+
+00:50   Wichtig - Das Hintergrundbild ist nur dann austauschbar, wenn es die exakt gleichen Maße hat
+        Eine Veränderung der % Maße des Navwrappers erfordert eine komplette Neukalibrierung der restlichen
+        Navigationselemente! Ob dies notwendig sein wird, wird sich aufgrund der mobilen Usability zeigen!
+        Manche Dots müssen evtl nachgerundet werden
+        Wichtig - Cross-Browser Unterstützung dringend erforderlich!
+
+
+
+Log 19.02 - by A.Z.
+
+11:21   Einbinden von Foundation-Grid in bestimmte Content Bereiche unumgänglich.
+        Umstieg auf eine auf einem mathematischem Kreis basierte, vollständig relativ-skalierbare und
+        Austauschbare Navigation geplant als 1. Update nach Release von v1
