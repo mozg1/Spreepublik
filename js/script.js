@@ -31,6 +31,8 @@ window.onload = function() {
         });
     */
 
+    var glow;
+
     /**
      * Scrolling-event handlers
      */
@@ -46,6 +48,13 @@ window.onload = function() {
         if(!onTop) {
             moveDown();
             $("#content").load("../html/content.html #"+id[0]).fadeIn("slow");
+
+            if(glow) {
+                clearInterval(glow);
+            }
+
+            setCurrent(id);
+
         } else {
             stay = true;
             fadeContent(stay).done(reloadContent.bind(undefined,id));
@@ -85,6 +94,27 @@ window.onload = function() {
         return r;
     };
 
+    function resetPrevious() {
+        $('.actualcontent').each(function () {
+            clearInterval(glow);
+            var older = this.id;
+            console.log("previous tab " + older);
+            $("#"+older+"Nav").removeClass('glow');
+            $("#"+older+"Nav").toggleClass('opacity');
+
+        });
+    }
+
+    function setCurrent(id) {
+        var newer = $("#"+id[0]+"Nav");
+        console.log("current tab "+ id[0]);
+
+        newer.toggleClass("opacity",1000);
+        glow = setInterval(function() {
+            newer.toggleClass('glow', 1000);
+        },1000);
+    }
+
     /**
      * Function for loading external html content
      * @param id - div id-marker of content to be displayed
@@ -93,18 +123,15 @@ window.onload = function() {
     function reloadContent(id) {
         console.log(Date.now());
 
+        resetPrevious();
+
+        setCurrent(id);
+
         $('body').animate({
             scrollTop: $("#level1").offset().top
         }, 1000);
         $("#content").load("../html/content.html #"+id[0]).fadeIn("slow");
     //    $(".actualcontent").remove();
-
-        var el = $("#"+id[0]+"Nav");
-
-        setInterval(function() {
-            el.toggleClass('glow');
-        },1000);
-
 
     }
 
@@ -188,10 +215,10 @@ window.onload = function() {
 
                 if ($(window).width() <= 1200){
                     $("#neuesNav").css({
-                        "-webkit-transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)",
-                        "-ms-transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)",
-                        "-moz-transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)",
-                        "transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)"
+                        "-webkit-transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)",
+                        "-ms-transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)",
+                        "-moz-transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)",
+                        "transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)"
                     });
                 } else {
                     $("#neuesNav").css({
@@ -265,10 +292,10 @@ window.onload = function() {
     function checkSize(){
         if ($(".sampleClass").css("float") == "none" ){
                 $("#neuesNav").css({
-                    "-webkit-transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)",
-                    "-ms-transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)",
-                    "-moz-transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)",
-                    "transform" : "rotate("+-170+"deg)" + "translate("+1+"em,"+1.5+"em)"
+                    "-webkit-transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)",
+                    "-ms-transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)",
+                    "-moz-transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)",
+                    "transform" : "rotate("+-170+"deg)" + "translate("+0.5+"em,"+1.5+"em)"
                 });
             } else {
                 $("#neuesNav").css({
@@ -289,7 +316,11 @@ window.onload = function() {
     function moveUp() {
         console.log(Date.now());
 
+        resetPrevious();
+
         $(".actualcontent").remove();
+
+
 
         // arrow is being moved in hideContent-method above
         // $("#backArrow").css({ disply:"none" });
@@ -468,6 +499,11 @@ window.onload = function() {
             onTop = false;
         }
     }
+
+    /**
+     * Gallery-function
+     */
+
 
     /**
      * test-function for the offset coordinates of LOGO and CONTENT

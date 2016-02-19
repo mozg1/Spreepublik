@@ -272,10 +272,6 @@ body {
 
 }
 
-.shortinfo.glow {
-/*    text-shadow : 0 0 10px blue;
-*/    opacity: 1.0;
-}
 
 /*
     style the Nav-Point-Text
@@ -357,6 +353,15 @@ body {
 }
 
 
+
+.shortinfo.glow {
+    text-shadow : 0 10px 10px blue;
+}
+
+.shortinfo.opacity {
+    opacity: 0.8;
+}
+
 /*
     Navigation-Point mouse-animation
 */
@@ -393,7 +398,7 @@ body {
     margin-left: -900%;
     margin-top: -100%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 
 }
@@ -412,7 +417,7 @@ body {
 
     margin-left: -500%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 
 }
@@ -438,7 +443,7 @@ body {
 
     margin-left: -400%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 }
 
@@ -457,7 +462,7 @@ body {
     margin-left: -800%;
     margin-right: 300%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 
 }
@@ -492,7 +497,7 @@ body {
     margin-top:-200%;
     margin-left:-300%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 }
 
@@ -510,7 +515,7 @@ body {
     margin-left:-150%;
     margin-right:500%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 }
 
@@ -529,7 +534,7 @@ body {
     margin-top:-500%;
     margin-left:-400%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 }
 
@@ -546,7 +551,7 @@ body {
 
     margin-left:-600%;
 
-    transition : text-shadow 1s linear
+    transition : text-shadow 1s linear;
 
 }
 
@@ -609,7 +614,7 @@ body {
 .titles {
     position:relative;
     width: 100%;
-
+    margin-bottom:5%;
 }
 
 .titles > h1 {

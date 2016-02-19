@@ -171,8 +171,8 @@ Log 18.02 - Gude
         ab Sonntag:
         TODO: Formattierung von Hintergrundfarbe und Rahmen, sowie evtl. Hintergrundbilder
         TODO: bei kurzen Punkten wie Konakt oder Spende - andere Logo-Animation(z.B. verkleinern)
-        TODO: Text-Fade-In, scroll-Level 2
-        TODO: CSS im Logo/Navigation zwecks Animations-Gimmicks und Einblendungen
+        TODO: Text-Fade-In, scroll-Level 2, Navigation wie bei Ignant oben mitgehen lassen
+        TODO: CSS im Logo/Navigation zwecks Animations-Gimmicks und Einblendungen, viel mehr hover-Interaktive Gimmicks
 
 23:38   Sieht zwar nich PERFEKT responsiv aus und die Drehanimation is wiggly,
         aber erfüllt auf jeden Fall seinen Zweck.
@@ -192,3 +192,52 @@ Log 19.02 - by A.Z.
 11:21   Einbinden von Foundation-Grid in bestimmte Content Bereiche unumgänglich.
         Umstieg auf eine auf einem mathematischem Kreis basierte, vollständig relativ-skalierbare und
         Austauschbare Navigation geplant als 1. Update nach Release von v1
+
+19:32   So, back to work
+        Erstmal das Bän-Gimmick fertig machen
+
+20:36   Aaach du Scheiße... Gerade in Safari reingeguckt. Isja wie Essensreste in nem Topf, der seit 3 Wochen nicht
+        abgewaschen wurde
+        TODO: Sonderbehandlung für Safari
+
+21:51   Ok, strange, offensichtlich kann man JQuery befehle nicht mit dem Punktoperator schachteln.
+
+22:26   Gut - Animations mit add/remove/toggleClass endlich gelöst. Jetzt noch schön in funktionen verpacken
+        TODO: Nicht vergessen var glow in Zukunft auf Validität als globale Varible zu prüfen zwecks Sicherheit!
+
+        TODO: eventuell: Hochscroll-Pfeil, Content-Level Markierungen an der Seite, zum schnelleren Durchscrollen
+        TODO: eventuell: SocialMedia - WidgetButtons am Rand
+
+22:33   So, ran an den Content!
+
+        Bei Projekte: könnte man linksbündig eine Scrollleiste machen, mit Zeitangaben, um dann rechts davon
+        die Projekte anzuzeigen, dazu am besten noch zu jedem Projekt ein Paar Bilder, wahlweise bereits im Text
+        integriert, oder als Thumbnails zum Draufklicken
+
+        Bei About: kann man eine Slideshow machen, mit den einzelnen Fragen, drunter den Text von Spree:publik
+
+        Kontakt: und Impressum in 2 Spalten nebeneinander
+
+        Spende: vorerst mit Newsletter ersetzen
+
+        Blog: ähnliche wie Projekte aufbauen
+
+        Gallerie: erstmal so wie bei der derzeitigen Spreepublik Seite, mit dem Unterschied, dass man nur die
+        Oberbilder sieht, mit Titel beim Hovern(?),
+        die sich erstmal vergrößern, wenn man sie hovert, und beim Clicken, die anderen
+        Bilder verschwinden und nur noch die Gallerie mit der Überschrift zu sehen ist, mit Scroll-Funktion und Rückpfeil.
+        Wrsl das aufwendigste
+
+        Flotte: Eine zweite Kreis-navigation mit den einzelnen Flößen in Kreisen zurechtgeschnitten und dem
+        Spreepublik-schiffchen in der Mitte. Drüber der normale Infotext. Drunter erscheinen die Infos für die
+        einzelnen Flöße, wenn man auf einen Kreis klickt. Die Kreise vergrößern sich auch, wenn man hovert,
+        und es gibt einen Link zur Gallerie des jeweiligen Floßes
+
+        Neues: Eine Art Willkommens-seite mit 1 Einrag, 1 Bild, die gerade die Top3 Themen der Spreepublik publiziert
+
+        TODO: bei runtergescrollter Navigation bitte Neues anstelle von Projekte, Flotte anstelle von Kontakt,
+        TODO: Projekte an Stelle von Spende, Spende an Stelle von Neues, Kontakt an Stelle von Flotte
+
+00:00   SO, als erster kommt die Gallerie
+
+
