@@ -1,0 +1,648 @@
+/*
+Theme Name: Spreepublik
+Author: A.Zorin & F.Hartmann
+Author URI: https://studicode.de/
+Description: Template für Spreepublik e.V.
+Version: 1.0
+
+*/
+/*
+    Responsive-Design attributes
+*/
+
+html, body {
+    min-width: 480px;
+}
+
+html {
+}
+
+body {
+}
+
+/*
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+    .navelement {
+        width: 15em;
+        height:15em;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1079px) {
+    .navelement {
+        width: 5em;
+        height:5em;
+    }
+}
+*/
+
+/*
+    Raw Page/DIV-Positioning
+*/
+
+#main {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    top:5%;
+    margin:-5% 0 auto;
+    z-index:0;
+}
+
+.navwrapper {
+    margin:5% auto 0;
+/*
+    width: 40%;
+*/
+    width: 40%; /* 713px; */
+    height: 40%; /* 731px; */
+
+    display: block;
+    z-index: 10;
+
+
+/*
+    background-image: url("../img/Spreepublik_logo_biggest.gif");
+    background-size:100% 100%;
+    background-position: 50% 50%;
+  */
+}
+
+/*
+    Logo-styling
+*/
+
+#spreelogo, .titles, .shortinfo, .entry {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#spreelogo {
+    margin: 0 auto;
+    overflow:visible;
+    width: 100%;
+    height: 100%;
+
+
+    /*
+        top: 50%; left: 50%;
+
+        transform: translate(-50%, 10%);
+        -webkit-transform: translate(-50%, 10%);
+        -ms-transform: translate(-50%, 10%);
+        -moz-transform: translate(-50%, 10%);
+    */
+}
+
+/*
+    Content-container
+*/
+
+#content {
+    font-size:1em;
+    width: 100%;
+    display:none;
+    z-index: 10;
+    margin-top:10%;
+}
+
+/*
+    Extras
+*/
+
+#main, .navwrapper, #navlist, .navelement  {
+    transition: all .5s;
+}
+
+#navlist {
+/*
+    width:100%;
+    height:100%;
+    */
+
+}
+
+#listwrapper {
+
+    top:100%; /*68px;*/
+    left:100%; /*87px;*/
+}
+
+#level1 {
+    position:absolute;
+    z-index:30;
+    top:50%;
+
+
+}
+
+
+/*----------------------------------------------------------------------------
+    Navigation Elements CSS
+    Detailed styling starts here
+*/
+
+.navelement {
+
+    z-index: 10;
+    font-size: 1.18em;
+
+    position: absolute;
+
+    top: 25.5%;
+    left: 25.5%;
+
+    -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+    -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
+    -moz-transform: skew(-50deg) rotate(-70deg) scale(1);
+    transform: skew(-50deg) rotate(-70deg) scale(1);
+
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: opacity 0.3s, color 0.3s;
+    -moz-transition: opacity 0.3s, color 0.3s;
+    transition: opacity 0.3s, color 0.3s, transform .5s;
+
+    background-color:rgba(255,255,255,0);
+
+    opacity:1.0;
+
+    border-radius: 50%;
+/*
+    min-width:5em;
+    min-height:5em;
+*/
+    width: 25%;
+    height:25%;
+    /*
+    width: 15em;
+    height:15em;
+    */
+
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+
+    list-style: none;
+}
+
+/*
+    placement of parallelogram shapes to a circle-formation
+*/
+
+.navwrapper li:first-child {
+    -webkit-transform: rotate(-10deg) skew(50deg);
+    -ms-transform: rotate(-10deg) skew(50deg);
+    -moz-transform: rotate(-10deg) skew(50deg);
+    transform: rotate(-10deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(2) {
+    -webkit-transform: rotate(30deg) skew(50deg);
+    -ms-transform: rotate(30deg) skew(50deg);
+    -moz-transform: rotate(30deg) skew(50deg);
+    transform: rotate(30deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(3) {
+    display: none;
+    -webkit-transform: rotate(70deg) skew(50deg);
+    -ms-transform: rotate(70deg) skew(50deg);
+    -moz-transform: rotate(70deg) skew(50deg);
+    transform: rotate(70deg) skew(50deg)
+}
+
+.navwrapper li:nth-child(4) {
+    -webkit-transform: rotate(110deg) skew(50deg);
+    -ms-transform: rotate(110deg) skew(50deg);
+    -moz-transform: rotate(110deg) skew(50deg);
+    transform: rotate(110deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(5) {
+    -webkit-transform: rotate(150deg) skew(50deg);
+    -ms-transform: rotate(150deg) skew(50deg);
+    -moz-transform: rotate(150deg) skew(50deg);
+    transform: rotate(150deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(6) {
+    -webkit-transform: rotate(190deg) skew(50deg);
+    -ms-transform: rotate(190deg) skew(50deg);
+    -moz-transform: rotate(190deg) skew(50deg);
+    transform: rotate(190deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(7) {
+    -webkit-transform: rotate(230deg) skew(50deg);
+    -ms-transform: rotate(230deg) skew(50deg);
+    -moz-transform: rotate(230deg) skew(50deg);
+    transform: rotate(230deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(8) {
+    -webkit-transform: rotate(270deg) skew(50deg);
+    -ms-transform: rotate(270deg) skew(50deg);
+    -moz-transform: rotate(270deg) skew(50deg);
+    transform: rotate(270deg) skew(50deg);
+}
+
+.navwrapper li:nth-child(9) {
+    -webkit-transform: rotate(310deg) skew(50deg);
+    -ms-transform: rotate(310deg) skew(50deg);
+    -moz-transform: rotate(310deg) skew(50deg);
+    transform: rotate(310deg) skew(50deg);
+}
+
+/*
+    shape Navigation-Points and transform to dots
+*/
+
+.navpoint {
+    width:5%;
+    height:12%;
+    background-color:steelblue;
+
+    border-radius:50%;
+
+    z-index:0;
+    opacity:1.0;
+
+    -webkit-transform: skew(-50deg);
+    -ms-transform: skew(-50deg);
+    -moz-transform: skew(-50deg);
+    transform: skew(-50deg);
+
+    position:absolute;
+
+}
+
+
+/*
+    style the Nav-Point-Text
+*/
+@media only screen and (max-width: 2048px) {
+    .shortinfo {
+        font-family: sans-serif;
+        position: relative;
+        font-size: 170%;
+        color: black;
+        text-shadow: 1px 1px black;
+
+        opacity: 0.3;
+    }
+
+    #impressumNav {
+        width:100%;
+    }
+
+    #aboutNav {
+        width:700%;
+    }
+}
+
+
+@media only screen and (max-width: 1920px) {
+    .shortinfo {
+        font-size: 150%;
+    }
+
+}
+
+@media only screen and (max-width: 1600px) {
+    .shortinfo {
+        font-size: 125%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .shortinfo {
+        font-size: 100%;
+    }
+
+    .titles {
+        font-size: 70%;
+    }
+
+    #neuesNav {
+        left: -170%;
+    }
+
+}
+
+@media only screen and (max-width: 860px) {
+    .post, .shortinfo, footer {
+        font-size:80%;
+    }
+
+    #aboutNav {
+        width:30%;
+        line-height:80%;
+    }
+
+    #impressumNav {
+        left:-200%;
+        top: -200%;
+    }
+
+
+
+    .titles {
+        font-size: 50%;
+    }
+
+    #content {
+        margin-top:15%;
+    }
+}
+
+
+
+.shortinfo.glow {
+    text-shadow : 0 10px 10px blue;
+}
+
+.shortinfo.opacity {
+    opacity: 0.8;
+}
+
+/*
+    Navigation-Point mouse-animation
+*/
+
+.navpoint:hover {
+    background-color: rgb(25,0,255);
+    transition: all .3s;
+}
+
+.navpoint:hover .shortinfo {
+    opacity: 1.0;
+    transition: all .3s;
+
+}
+
+.navpoint > a {
+    position:absolute;
+    right:1px;
+}
+
+/*
+    In pairs:
+    Re-positioning of Points to a circle, absolute to position in the parallelogram - FIXED!
+    Horizontal re-alignment of Button-Text, due to displacement by former shape & position transformation
+*/
+
+#aboutNav {
+
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg); /* translate(-6em, 0.5em); */
+
+    margin-left: -900%;
+    margin-top: -100%;
+
+    transition : text-shadow 1s linear;
+
+
+}
+
+#aboutPoint {
+
+    top:7%;
+    left: 79%;
+}
+
+#neuesNav {
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    transform: rotate(-30deg); /*translate(-3.5em, -1em);*/
+
+    margin-left: -500%;
+
+    transition : text-shadow 1s linear;
+
+
+}
+
+
+.sampleClass {float:left;}
+
+@media only screen and (max-width: 1200px){
+    .sampleClass {float:none;}
+}
+
+#neuesPoint {
+    top: -21%;
+    left:94%;
+}
+
+
+#projekteNav {
+    -webkit-transform: rotate(-110deg);
+    -ms-transform: rotate(-110deg);
+    -moz-transform: rotate(-110deg);
+    transform: rotate(-110deg);
+
+    margin-left: -400%;
+
+    transition : text-shadow 1s linear;
+
+}
+
+#projektePoint {
+    top: 39%;
+    left:35%;
+}
+
+#gallerieNav {
+    -webkit-transform: rotate(-190deg);
+    -ms-transform: rotate(-190deg);
+    -moz-transform: rotate(-190deg);
+    transform: rotate(-190deg);
+
+
+    margin-left: -800%;
+    margin-right: 300%;
+
+    transition : text-shadow 1s linear;
+
+
+}
+
+#galleriePoint {
+    top: 22%;
+    left:83%;
+
+}
+/* use impressumNav
+#kontaktNav {
+    -webkit-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    transform: rotate(-70deg);
+
+    margin-left: 200%;
+}
+
+#kontaktPoint {
+    top: 80%;
+
+}
+*/
+#flotteNav {
+    -webkit-transform: rotate(-150deg);
+    -ms-transform: rotate(-150deg);
+    -moz-transform: rotate(-150deg);
+    transform: rotate(-150deg);
+
+    margin-right: 200%;
+    margin-top:-200%;
+    margin-left:-300%;
+
+    transition : text-shadow 1s linear;
+
+}
+
+#flottePoint {
+    top: 44%;
+    left: 61%;
+}
+
+#blogNav {
+    -webkit-transform: rotate(-230deg);
+    -ms-transform: rotate(-230deg);
+    -moz-transform: rotate(-230deg);
+    transform: rotate(-230deg);
+
+    margin-left:-150%;
+    margin-right:500%;
+
+    transition : text-shadow 1s linear;
+
+}
+
+#blogPoint {
+    top: -1%;
+    left:91%;
+}
+
+#impressumNav {
+
+    -webkit-transform: rotate(-310deg));
+    -ms-transform: rotate(-310deg);
+    -moz-transform: rotate(-310deg);
+    transform: rotate(-310deg);
+
+    margin-top:-500%;
+    margin-left:-400%;
+
+    transition : text-shadow 1s linear;
+
+}
+
+#impressumPoint {
+    top: 13%;
+    left:81%;
+}
+
+#spendenNav {
+    -webkit-transform: rotate(-270deg);
+    -ms-transform: rotate(-270deg);
+    -moz-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+
+    margin-left:-600%;
+
+    transition : text-shadow 1s linear;
+
+}
+
+#spendenPoint {
+    top: -5%;
+    left:93%;
+}
+
+/*
+    Return-arrow style
+*/
+
+#backArrow {
+    width:15%;
+    height:10%;
+
+    display: none;
+    position: fixed;
+    float:right;
+    top: 10px;
+    right:1%;
+    z-index: 20;
+    opacity:0.8;
+    margin:0;
+    border:0;
+}
+
+/*
+    Content styling
+*/
+
+.actualcontent {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.post {
+    position:relative;
+    width:100%;
+    background-color: rgba(233,233,233,0.9);
+    border-style:solid;
+    border-width:50px;
+    border-color:rgba(233,233,233,0.9);
+    border-radius: 0.5%;
+    box-shadow: 0 0 25px 5px gray;
+}
+
+.post > img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.entry > img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.titles {
+    position:relative;
+    width: 100%;
+    margin-bottom:5%;
+}
+
+.titles > h1 {
+    text-align:center;
+    font-size: 500%;
+}
+
+img {
+    overflow:visible;
+    vertical-align:middle;
+}
+
+/*
+    Footer styling
+*/
+
+footer {
+    text-align:center;
+    position:relative;
+    display:block;
+    top: 15%;
+
+}
