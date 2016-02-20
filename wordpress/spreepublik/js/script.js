@@ -130,7 +130,7 @@ window.onload = function() {
         $('body').animate({
             scrollTop: $("#level1").offset().top
         }, 1000);
-        $("#content").load("../html/content.html #"+id[0]).fadeIn("slow");
+        $("#content").load("./"+id[0]).fadeIn("slow");
     //    $(".actualcontent").remove();
 
     }
