@@ -47,7 +47,7 @@ window.onload = function() {
         console.log(onTop);
         if(!onTop) {
             moveDown();
-            $("#content").load("../html/content.html #"+id[0]).fadeIn("slow");
+            $("#content").load("./"+id[0]).fadeIn("slow");
 
             if(glow) {
                 clearInterval(glow);
